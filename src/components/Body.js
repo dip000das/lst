@@ -27,33 +27,33 @@ const Body = () => {
 
 
 
-  // const fetchData = async () => {
-  //   const data = await fetch(
-  //     'https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5148386&lng=88.4097881&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
-  //   );
-
-  //   const json = await data.json();
-
-  //    console.log(json);
-  //   // * optional chaining
-  //   // setListOfRestaurants(json.data.cards[2].data.data.cards);
-  //   setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  //   setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  // };
-
-
   const fetchData = async () => {
-    // const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.2893144&lng=80.4604643&is-seo-homepage-enabled=true');
-     const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&collection=83667');
-     const json = await data.json();
-     console.log("apiData", json?.data.cards[2]);
-     //below written code is not a good way to write code , please use optional chaining
-     //setList(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+    const data = await fetch(
+      'https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5148386&lng=88.4097881&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+    );
+
+    const json = await data.json();
+
+     console.log(json);
+    // * optional chaining
+    // setListOfRestaurants(json.data.cards[2].data.data.cards);
+    setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  };
+
+
+  // const fetchData = async () => {
+  //   // const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.2893144&lng=80.4604643&is-seo-homepage-enabled=true');
+  //    const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&collection=83667');
+  //    const json = await data.json();
+  //    console.log("apiData", json?.data.cards[2]);
+  //    //below written code is not a good way to write code , please use optional chaining
+  //    //setList(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
  
     
-     setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-     setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-   }
+  //    setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  //    setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  //  }
 
 
 
